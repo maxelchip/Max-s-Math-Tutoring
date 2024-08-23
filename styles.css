@@ -135,7 +135,11 @@ footer {
   background-color: #1d3557;
   color: white;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 @keyframes slideIn {
   from {
