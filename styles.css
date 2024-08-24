@@ -2,13 +2,13 @@ body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #F5EDED;
   color: #333;
-  text-align: center;
+  text-align: left;
 }
 
 header {
-  background-color: #1d3557;
+  background-color: #6482AD;
   color: white;
   padding: 60px 20px;
   position: relative;
@@ -40,7 +40,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #a8dadc;
+  color: coral;
+  text-decoration: underline;
 }
 
 .header-content {
@@ -60,29 +61,33 @@ p {
 }
 
 section {
-  padding: 60px 20px;
+  padding: 45px 20px;
   background-color: white;
   margin: 20px auto;
   width: 80%;
   max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #7FA1C3;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 section:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px);
 }
 
 h2 {
   color: #1d3557;
   font-size: 2.5em;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 20px;
   margin: 0;
 }
 
