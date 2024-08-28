@@ -48,7 +48,27 @@ nav ul li a:hover {
   margin-top: 30px;
   animation: slideIn 1s ease-out;
 }
-
+#selfie {
+    border: 5px solid #1d3557;
+    object-fit: cover;
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+#selfiediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  color: rgb(0, 0, 75);
+}
 h1 {
   font-size: 3.5em;
   margin-bottom: 10px;
@@ -61,7 +81,7 @@ p {
 }
 
 section {
-  padding: 45px 20px;
+  padding: 20px 20px;
   background-color: white;
   margin: 20px auto;
   width: 80%;
