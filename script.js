@@ -12,3 +12,48 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         document.getElementById('formResponse').textContent = 'Please fill out all fields.';
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const hoverElement = document.getElementById('services');
+    const audio = document.getElementById('hoverAudio');
+  
+    hoverElement.addEventListener('mouseenter', function() {
+      audio.currentTime = 0; // Reset audio to start
+      audio.play();
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const hoverElement = document.getElementById('about');
+    const audio = document.getElementById('hoverAudio');
+  
+    hoverElement.addEventListener('mouseenter', function() {
+      audio.currentTime = 0; // Reset audio to start
+      audio.play();
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const hoverElement = document.getElementById('why');
+    const audio = document.getElementById('hoverAudio');
+  
+    hoverElement.addEventListener('mouseenter', function() {
+      audio.currentTime = 0; // Reset audio to start
+      audio.play();
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const hoverElement = document.getElementById('testimonials');
+    const audio = document.getElementById('hoverAudio');
+  
+    hoverElement.addEventListener('mouseenter', function() {
+      audio.currentTime = 0; // Reset audio to start
+      audio.play();
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const hoverElement = document.getElementById('contact');
+    const audio = document.getElementById('hoverAudio');
+  
+    hoverElement.addEventListener('mouseenter', function() {
+      audio.currentTime = 0; // Reset audio to start
+      audio.play();
+    });
+});
