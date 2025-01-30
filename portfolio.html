@@ -22,15 +22,12 @@
             box-sizing: border-box;
             font-family: 'Noto Sans', sans-serif;
         }
-        .page-wrapper {
-        padding-top: 80px;
-        }
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 1.5rem; 
+            padding: 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -40,13 +37,18 @@
         }
 
         .hero {
-            min-height: 100vh; 
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 120px 10% 60px 10%;
+            padding: 80px 10% 60px 10%; /* Adjusted top padding to account for fixed nav */
             position: relative;
+            background-color: var(--bg-dark); /* Explicitly set background color */
         }
 
+        .hero-content {
+            max-width: 600px;
+            width: 100%; /* Ensure content takes full width up to max-width */
+        }
         body {
             background-color: var(--bg-dark);
             color: var(--text-light);
@@ -65,18 +67,7 @@
             z-index: 9999;
         }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
+       
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -112,17 +103,7 @@
             width: 100%;
         }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 10%;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
+        
 
         .hero-title {
             font-size: 4rem;
