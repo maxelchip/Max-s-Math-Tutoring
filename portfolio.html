@@ -22,6 +22,30 @@
             box-sizing: border-box;
             font-family: 'Noto Sans', sans-serif;
         }
+        .page-wrapper {
+        padding-top: 80px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(10, 10, 10, 0.8);
+        }
+
+        .hero {
+            min-height: 100vh; 
+            display: flex;
+            align-items: center;
+            padding: 120px 10% 60px 10%;
+            position: relative;
+        }
 
         body {
             background-color: var(--bg-dark);
