@@ -36,23 +36,14 @@
             background-color: rgba(10, 10, 10, 0.8);
         }
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 80px 10% 60px 10%; /* Adjusted top padding to account for fixed nav */
-            position: relative;
-            background-color: var(--bg-dark); /* Explicitly set background color */
-        }
-
-        .hero-content {
-            max-width: 600px;
-            width: 100%; /* Ensure content takes full width up to max-width */
-        }
+       
         body {
             background-color: var(--bg-dark);
             color: var(--text-light);
             overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .cursor {
@@ -104,22 +95,6 @@
         }
 
         
-
-        .hero-title {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-gray);
-            margin-bottom: 2rem;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
@@ -139,7 +114,8 @@
         }
 
         .projects {
-            padding: 5rem 10%;
+            padding: 2rem 10%;
+            margin-top: 80px; 
         }
 
         .section-title {
@@ -149,19 +125,26 @@
             text-align: center;
         }
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .intro-text {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: var(--text-light);
         }
 
+        .project-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+
+        
         .project-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease;
+            flex: 1;
             cursor: pointer;
-            border: 2px solid var(--primary);
         }
 
         .project-card:hover {
@@ -170,12 +153,10 @@
 
         .project-image {
             width: 100%;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            margin-bottom: 1rem;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
         }
-
         .project-title {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -187,11 +168,42 @@
             line-height: 1.6;
         }
 
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
         footer {
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.05);
             color: var(--text-light);
-            margin-top: 20px;
+            margin-top: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -228,34 +240,32 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">My Teaching Portfolio</h1>
-            <p class="hero-subtitle">Showcasing my experience in mathematics education and student success stories.</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+       
+    <section class="projects" id="projects">
+        <p class="intro-text">Here is some math-inspired art I made with Python:</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('radicalfinal3.png')"></div>
+                <h3 class="project-title">Recaman Sequence  over Fourier Series</h3>
+                <p class="project-description">Submitted for HCHS Radicals Math Magazine.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('recaman_py2.png')"></div>
+                <h3 class="project-title">Recaman Sequence</h3>
+                <p class="project-description">First 70 elements, visualized.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('fourier_art2.png')"></div>
+                <h3 class="project-title">Fourier Art</h3>
+                <p class="project-description">Several randomly generated Fourier series (sum of randomly generated sine waves), horizontally stretched in proportion to cos(x).</p>
+            </div>
         </div>
     </section>
 
-    <section class="projects" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="project-image"></div>
-                <h3 class="project-title">Math Competition Prep</h3>
-                <p class="project-description">Helping students excel in AMC10 and other math competitions through specialized training and problem-solving strategies.</p>
-            </div>
-            <div class="project-card">
-                <div class="project-image"></div>
-                <h3 class="project-title">Online Tutoring Success</h3>
-                <p class="project-description">Creating engaging virtual learning experiences that help students master complex mathematical concepts.</p>
-            </div>
-            <div class="project-card">
-                <div class="project-image"></div>
-                <h3 class="project-title">Student Progress Tracking</h3>
-                <p class="project-description">Implementing effective methods to monitor and enhance student understanding and achievement in mathematics.</p>
-            </div>
-        </div>
-    </section>
+    <div class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img src="" alt="Enlarged artwork">
+    </div>
 
     <footer>
         <div id="rightfoot">
@@ -271,6 +281,30 @@
             cursor.style.top = e.clientY + 'px';
         });
 
+        const cards = document.querySelectorAll('.project-card');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const closeBtn = document.querySelector('.close-btn');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgUrl = card.querySelector('.project-image').style.backgroundImage
+                    .replace('url("', '')
+                    .replace('")', '');
+                lightboxImg.src = imgUrl;
+                lightbox.style.display = 'block';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
         gsap.from('.hero-title', {
             duration: 1,
             y: 30,
