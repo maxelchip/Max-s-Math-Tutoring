@@ -91,6 +91,16 @@ nav ul li a:hover {
     height: 250px;
     border-radius: 50%;
 }
+
+#selfie2 {
+    border: 5px solid #1d3557;
+    object-fit: cover;
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+}
 #selfiediv {
   display: flex;
   justify-content: center;
@@ -135,7 +145,13 @@ section {
 section:hover {
   transform: translateY(-15px);
 }
-
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 h2 {
   color: #1d3557;
   font-size: 2.5em;
