@@ -40,7 +40,8 @@ body {
   text-align: center;
 }
 header {
-  background: url('recaman_py2.png') center -22px/cover no-repeat;
+  background: url('recaman_py2.png') center 20px/auto no-repeat;
+  height: 300px;
   color: white;
   padding: 60px 20px;
   position: relative;
